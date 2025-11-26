@@ -1,5 +1,5 @@
-import Carrossel from '../components/carrossel/carrossel.jsx';
-import Gatilhos from '../components/sections/gatilhos.jsx';
+import Carrossel from '../components/carrossel/Carrossel.jsx';
+import Gatilhos from '../components/sections/Gatilhos.jsx';
 
 export default function Home() {
   return (
