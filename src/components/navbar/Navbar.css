@@ -1,3 +1,8 @@
+.site-navbar__link,
+.site-navbar__link * {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Container geral */
 .site-navbar {
   width: 100%;
@@ -131,6 +136,14 @@
   .site-navbar__link > svg {
     width: 22px;
     height: 22px;
+  }
+
+  /* HOVER AZUL-BASE NOS ÍCONES DO MOBILE */
+  .site-navbar__link:hover svg path,
+  .site-navbar__link:hover svg circle,
+  .site-navbar__link:hover svg line {
+    stroke: var(--cor-azul-base);
+    transition: stroke 0.2s ease;
   }
 }
 
