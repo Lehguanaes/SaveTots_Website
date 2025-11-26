@@ -1,0 +1,71 @@
+/* ============================= */
+/*      SEÇÃO 2 — CARDS          */
+/* ============================= */
+.cardsSection {
+    background-color: var(--cor-roxo-detalhe);
+    padding: 80px 40px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    background-color: var(--cor-roxo-detalhe);
+    border-radius: 20px;
+    width: 400px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.mainTitle {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--cor-branco);
+
+  /* garante que NÃO vire card */
+  flex: 0 0 100%;
+}
+
+.stepTitle {
+  font-size: 1.6rem;
+  color: var(--cor-branco);
+  margin: 20px 0 10px;
+}
+
+.description{
+  font-size: 1.3rem;
+  color: var(--cor-branco);
+}
+
+.cardImg {
+  width: 300px;
+  display: block;
+  margin: 10px auto;
+  border: 2px solid var(--branco);
+  padding: 10px;
+  border-radius: 25px;
+  background: rgb(246, 246, 246);
+  transition: transform .3s ease;
+}
+
+.card:hover .cardImg {
+  transform: scale(1);
+}
+
+.cardContent {
+  padding: 0 16px 24px;
+}
+
+.cardContent p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
