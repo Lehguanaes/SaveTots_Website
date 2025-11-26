@@ -1,10 +1,46 @@
+/* ---------------- Estilos globais ---------------- */
 :root {
-  --bg: #ffffff;
-  --text: #222222;
-  --muted: #666666;
-  --accent: #2563eb;
+  --cor-branco: #ffffff;
+  --cor-sombra: rgba(0,0,0,0.06);
+
+  /* Cores principais */
+  --cor-vermelho-principal: #c45541;
+  --cor-azul-base: #09074d;
+
+  /* Fundo e texto */
+  --cor-bg: #f9f9f9;
+  --cor-texto: #1a1a1a;
+
+  /* Footer */
+  --cor-footer-bg: #0f1724;
+  --cor-footer-texto: #ffffff;
 }
+
 * { box-sizing: border-box; }
-body { margin:0;background: var(--bg); color: var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
-a { color: inherit; text-decoration: none; }
-nav a { padding: 8px 12px; display:inline-block; }
+
+body { 
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+
+nav a { 
+  padding: 8px 12px; 
+  display: inline-block;
+}
+
+.fade-page {
+  animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
