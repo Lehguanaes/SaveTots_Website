@@ -1,0 +1,107 @@
+/* Container geral */
+.site-navbar {
+  width: 100%;
+  background: #fdfcf5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: relative;
+  z-index: 20;
+}
+
+/* Inner — AGORA sem margens que empurram tudo */
+.site-navbar__inner {
+  width: 98%;           /* ocupa toda a largura */
+  padding: 10px 50px;    /* padding reduzido para colar mais à esquerda */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1px;
+}
+
+/* Logo e texto */
+.site-navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-logo {
+  width: 210px;
+  height: auto;
+  display: block;
+}
+
+/* Toggle */
+.site-navbar__toggle {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Nav */
+.site-navbar__nav {
+  display: none;
+}
+
+/* Lista */
+.site-navbar__list {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navbar__link {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #c45541;
+  transition: color .15s ease;
+}
+
+.site-navbar__link:hover {
+  color: #09074d;
+}
+
+/* Mobile menu aberto */
+.site-navbar__nav--open {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 64px;
+  width: 100%;
+  background: #fdfcf5;
+  padding: 12px 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.site-navbar__nav--open .site-navbar__list {
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .site-navbar__toggle {
+    display: none;
+  }
+
+  .site-navbar__nav {
+    display: block;
+    position: static;
+    width: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .site-navbar__list {
+    flex-direction: row;
+  }
+}
