@@ -10,7 +10,7 @@
 /* Inner — AGORA sem margens que empurram tudo */
 .site-navbar__inner {
   width: 98%;           /* ocupa toda a largura */
-  padding: 10px 50px;    /* padding reduzido para colar mais à esquerda */
+  padding: 7px 50px;    /* padding reduzido para colar mais à esquerda */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +25,7 @@
 }
 
 .site-logo {
-  width: 210px;
+  width: 200px;
   height: auto;
   display: block;
 }
@@ -56,7 +56,7 @@
 }
 
 .site-navbar__link {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   text-transform: lowercase;
