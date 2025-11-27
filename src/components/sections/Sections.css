@@ -1,157 +1,129 @@
 /* ============================= */
-/*      SEÇÃO 2 — CARDS          */
+/*      SEÇÃO — GATILHOS         */
 /* ============================= */
-.cardsSection {
-    background-color: var(--cor-roxo-detalhe);
-    padding: 80px 40px 40px;
+
+.gatilhosSection {
+    background-color: #6D4A9C;
+    padding: 50px 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
 }
 
-.card {
-    background-color: var(--cor-roxo-detalhe);
-    border-radius: 20px;
-    width: 400px;
-    overflow: hidden;
+/* Coluna de texto */
+.gatilhosText {
+    width: 45%;
+}
+
+.gatilhosTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--cor-branco);
+    line-height: 1.2;
+    font-family: 'Montserrat';
     text-align: center;
-    transition: transform .3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.gatilhosLine {
+    width: 300px;
+    height: 4px;
+    background-color: var(--cor-branco);
+    margin: 12px auto 25px;
+    border-radius: 15px;
 }
 
-.mainTitle {
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700px;
-  margin-bottom: 20px;
-  color: var(--cor-branco);
-  text-transform: uppercase; /* tudo MAIÚSCULO */
-  font-family: 'Montserrat'; /* fonte quadrada */
-  /* garante que NÃO vire card */
-  flex: 0 0 100%;
-}
-
-.stepTitle {
-  font-size: 1.6rem;
-  color: var(--cor-branco);
-  margin: 20px 0 10px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.description{
-  font-size: 1.3rem;
-  color: var(--cor-branco);
-  font-family: 'Montserrat', sans-serif;
-}
-
-.cardImg {
-  width: 300px;
-  display: block;
-  margin: 10px auto;
-  border: 2px solid var(--branco);
-  padding: 10px;
-  border-radius: 25px;
-  background: rgb(246, 246, 246);
-  transition: transform .3s ease;
-}
-
-.card:hover .cardImg {
-  transform: scale(1);
-}
-
-.cardContent {
-  padding: 0 16px 24px;
-}
-
-.cardContent p {
-  font-size: 1.05rem;
-  line-height: 1.6;
+.gatilhosDescription {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--cor-branco);
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
 }
 
 /* ============================= */
-/*  RESPONSIVO — SEÇÃO 2 CARDS   */
+/*         CARDS                 */
 /* ============================= */
 
-@media (max-width: 768px) {
-
-  .cardsSection {
-      padding: 50px 20px 30px;
-      gap: 25px;
-  }
-
-  .mainTitle {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-  }
-
-  .card {
-      width: 100%;
-      max-width: 300px; /* menor ainda */
-      border-radius: 16px;
-  }
-
-  .stepTitle {
-      font-size: 1.25rem;
-      margin: 12px 0 6px;
-  }
-
-  .description {
-      font-size: 1rem;
-  }
-
-  .cardImg {
-      width: 180px;       /* reduzida */
-      padding: 6px;
-      border-radius: 16px;
-  }
-
-  .cardContent {
-      padding: 0 12px 18px;
-  }
-
-  .cardContent p {
-      font-size: 0.92rem;
-      line-height: 1.4;
-  }
+.gatilhosCards {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Mantém todos na mesma altura */
+    gap: 25px;
 }
 
-/* Celulares muito pequenos (até 420px) */
-@media (max-width: 420px) {
+.gatilhoItem {
+    background: #6d4a9c;
+    padding: 30px;
+    border-radius: 18px;
+    width: 260px;
+    min-height: 330px; /* Garante altura igual */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
 
-  .cardsSection {
-      padding: 40px 15px 25px;
-      gap: 18px;
-  }
+/* TÍTULOS ALINHADOS */
+.gatilhoItem h3 {
+    color: var(--cor-branco);
+    font-size: 1.3rem;
+    font-family: 'Montserrat';
+    margin-bottom: 16px;
+    height: 40px; /* Padroniza a área do título */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-  .mainTitle {
-      font-size: 1.35rem;
-  }
+/* IMAGENS ALINHADAS */
+.gatilhoItem img {
+    width: 120px;
+    height: 120px;       /* Todas iguais */
+    object-fit: contain; /* Mantém proporção */
+    background: #ffffff;
+    padding: 14px;
+    border-radius: 18px;
+    margin-bottom: 16px;
+}
 
-  .card {
-      max-width: 260px; /* ainda menor */
-  }
+/* DESCRIÇÕES ALINHADAS */
+.gatilhoItem p {
+    color: var(--cor-branco);
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    height: 40px; /* Área igual para alinhar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto; /* Empurra para baixo se faltar texto */
+}
 
-  .stepTitle {
-      font-size: 1.1rem;
-  }
+/* ============================= */
+/* RESPONSIVO                    */
+/* ============================= */
 
-  .description {
-      font-size: 0.9rem;
-  }
+@media (max-width: 900px) {
+    .gatilhosSection {
+        flex-direction: column;
+        padding: 60px 30px;
+        text-align: center;
+    }
 
-  .cardImg {
-      width: 150px;      /* bem menor */
-      padding: 5px;
-      border-radius: 14px;
-  }
+    .gatilhosText {
+        width: 100%;
+    }
 
-  .cardContent p {
-      font-size: 0.82rem;
-      line-height: 1.32;
-  }
+    .gatilhosCards {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gatilhoItem {
+        width: 230px;
+        min-height: 300px;
+    }
 }

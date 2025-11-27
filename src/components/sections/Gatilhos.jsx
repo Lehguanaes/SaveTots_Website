@@ -1,34 +1,45 @@
 import './Sections.css';
 import peso from '../../assets/gatilhos/peso.png';
-import movimento  from '../../assets/gatilhos/movimento.png';
+import movimento from '../../assets/gatilhos/movimento.png';
 import ausencia from '../../assets/gatilhos/ausencia.png';
 
 export default function Gatilhos() {
-    return ( 
-        <div className="cardsSection">
+    return (
+        <section className="gatilhosSection">
 
-            <h1 className="mainTitle">
-                Nosso conjunto de produtos funcionam <br/> com base em três gatilhos:
-            </h1>
+            <div className="gatilhosText">
+                <h2 className="gatilhosTitle">Como funcionam os nossos gatilhos?</h2>
+                <div className="gatilhosLine"></div>
 
-            <div className="card">
-                <h3 className="stepTitle">1° GATILHO</h3>
-                <img src={peso} className="cardImg" />
-                <p className="description">Monitorar se há peso</p>
+                <p className="gatilhosDescription">
+                    Nosso conjunto de produtos opera com base em três gatilhos principais que
+                    garantem a segurança durante o uso do sistema. Cada gatilho identifica uma
+                    situação diferente e aciona respostas importantes para evitar riscos.
+                </p>
             </div>
 
-            <div className="card">
-                <h3 className="stepTitle">2° GATILHO</h3>
-                <img src={movimento} className="cardImg" />
-                <p className="description">Verificar se há movimento</p>
+            <div className="gatilhosCards">
+
+                <div className="gatilhoItem">
+                    <h3>1º Gatilho Peso</h3>
+                    <img src={peso} alt="Peso" />
+                    <p>Monitorar se há peso</p>
+                </div>
+
+                <div className="gatilhoItem">
+                    <h3>2º Gatilho Movimento</h3>
+                    <img src={movimento} alt="Movimento" />
+                    <p>Verificar se há movimento</p>
+                </div>
+
+                <div className="gatilhoItem">
+                    <h3>3º Gatilho Ausência</h3>
+                    <img src={ausencia} alt="Ausência" />
+                    <p>Identificar se há ausência do responsável</p>
+                </div>
+
             </div>
 
-            <div className="card">
-                <h3 className="stepTitle">3° GATILHO</h3>
-                <img src={ausencia} className="cardImg" />
-                <p className="description">Identificar se há ausência do responsável</p>
-            </div>
-
-        </div>
+        </section>
     );
 }
