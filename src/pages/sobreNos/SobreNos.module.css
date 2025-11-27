@@ -1,0 +1,249 @@
+:root {
+  --cor-vermelho: #c12020;
+  --cor-texto: #eee;
+  --cor-bg: linear-gradient(135deg, #2e1a47 0%, #4b2b72 100%);
+  --cor-card-bg: rgba(255, 255, 255, 0.08);
+  --cor-card-borda: rgba(255, 255, 255, 0.18);
+  --shadow: 0 4px 40px rgba(0, 0, 0, 0.35);
+  --fonte-principal: "Inter", Arial, sans-serif;
+}
+
+/* Fundo com animação suave */
+.container {
+  padding: 80px 20px;
+  min-height: 100vh;
+  background: var(--cor-bg);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Título */
+.subtitulo {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 800;
+ margin-top: -40px;   /* puxa pra cima */
+  margin-bottom: 30px;
+    color:var(--cor-roxo-detalhe);
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  letter-spacing: -0.5px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOTO DO GRUPO */
+.fotoGrupo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+  animation: fadeUp 0.9s ease-out;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fotoGrupoImg {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 25px;
+  border: 3px solid rgba(255, 255, 255, 0.45);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+  transition: 0.35s ease;
+}
+
+.fotoGrupoImg:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+}
+
+.fotoGrupoTexto {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--cor-roxo-detalhe);
+  max-width: 700px;
+  margin: 25px auto 0;
+  padding: 35px 28px;   /* Aumentei o padding para caber as aspas dentro */
+  position: relative;
+  text-align: center;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+.fotoGrupoTexto:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* Aspas decorativas agora DENTRO do box */
+.fotoGrupoTexto::before {
+  content: '"';
+  font-size: 3.5rem;
+  color: var(--cor-vermelho);
+  opacity: 0.17;
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  line-height: 1;
+}
+
+.fotoGrupoTexto::after {
+  content: '"';
+  font-size: 3.5rem;
+  color: var(--cor-vermelho);
+  opacity: 0.17;
+  position: absolute;
+  bottom: 8px;
+  right: 18px;
+  line-height: 1;
+}
+
+
+
+
+/* CARDS */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--cor-card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: 26px;
+  padding: 2.4rem 1.7rem;
+  width: 310px;
+  text-align: center;
+  border: 1px solid var(--cor-card-borda);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  transition: 0.35s ease;
+  animation: floatCard 0.9s ease forwards;
+  opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes floatCard {
+  from { transform: translateY(25px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.45);
+}
+
+/* FOTO DO CARD */
+.cardImg {
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.1rem;
+  border: 4px solid var(--cor-vermelho);
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.18);
+  transition: 0.3s ease;
+}
+
+.cardImg:hover {
+  transform: scale(1.10);
+  filter: brightness(1.1);
+}
+
+/* NOME */
+.cardTitle {
+  color: var(--cor-vermelho);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 0.4rem;
+  letter-spacing: 0.6px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+
+  text-decoration: underline;
+  text-decoration-color: var(--cor-vermelho);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px; /* distância do sublinhado */
+}
+
+
+/* INFO (GitHub) */
+.cardInfo {
+  margin-top: 0.7rem;
+  text-align: center;
+}
+
+.githubLink {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cor-roxo-detalhe);
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.githubLink:hover {
+  color: var(--cor-vermelho);
+  transform: scale(1.06);
+}
+
+.githubIcon {
+  font-size: 1.4rem;
+}
+
+
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+
+.card {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .cardImg {
+    width: 190px;
+    height: 190px;
+  }
+
+
+  .fotoGrupoImg {
+    max-width: 300px;
+  }
+
+  .fotoGrupoTexto {
+    font-size: 1.05rem;
+  }
+}
