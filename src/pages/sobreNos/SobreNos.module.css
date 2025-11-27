@@ -27,6 +27,8 @@
   text-align: center;
   font-size: 2.6rem;
   font-weight: 800;
+      font-family: 'Montserrat';
+
  margin-top: -40px;   /* puxa pra cima */
   margin-bottom: 30px;
     color:var(--cor-roxo-detalhe);
@@ -74,6 +76,7 @@
 .fotoGrupoTexto {
   font-size: 1.2rem;
   line-height: 1.8;
+  font-family: 'Montserrat';
   color: var(--cor-roxo-detalhe);
   max-width: 780px;
   margin: 25px auto 0;
@@ -182,6 +185,8 @@
   font-weight: 800;
   margin-top: 0.4rem;
   letter-spacing: 0.6px;
+      font-family: 'Montserrat';
+
   text-shadow: 0 3px 6px rgba(0,0,0,0.4);
 
   text-decoration: underline;
@@ -200,6 +205,8 @@
 .githubLink {
   margin-top: 10px;
   display: flex;
+      font-family: 'Montserrat';
+
   justify-content: center;
   gap: 8px;
   font-size: 1.05rem;
@@ -220,6 +227,7 @@
 
 .contato {
   margin-top: 45px;
+      font-family: 'Montserrat';
   margin-bottom: 20px;
   text-align: center;
   font-size: 1.2rem;
