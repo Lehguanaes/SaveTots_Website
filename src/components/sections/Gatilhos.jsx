@@ -26,7 +26,7 @@ export default function Gatilhos() {
             <div className="card">
                 <h3 className="stepTitle">3° GATILHO</h3>
                 <img src={ausencia} className="cardImg" />
-                <p className="description">Identificar se há ausencia do responsável</p>
+                <p className="description">Identificar se há ausência do responsável</p>
             </div>
 
         </div>

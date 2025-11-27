@@ -31,7 +31,7 @@
   margin-bottom: 20px;
   color: var(--cor-branco);
   text-transform: uppercase; /* tudo MAIÚSCULO */
-  font-family: 'Montserrat', sans-serif; /* fonte quadrada */
+  font-family: 'Montserrat'; /* fonte quadrada */
   /* garante que NÃO vire card */
   flex: 0 0 100%;
 }
@@ -40,11 +40,13 @@
   font-size: 1.6rem;
   color: var(--cor-branco);
   margin: 20px 0 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .description{
   font-size: 1.3rem;
   color: var(--cor-branco);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cardImg {
