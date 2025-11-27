@@ -8,10 +8,10 @@
   --fonte-principal: "Inter", Arial, sans-serif;
 }
 
-/* Fundo com animação suave */
+/* Fundo animado */
 .container {
- padding: 60px 20px 40px;
-  min-height: auto; 
+  padding: 60px 20px 40px;
+  min-height: auto;
   background-size: 400% 400%;
   animation: gradientMove 12s ease infinite;
 }
@@ -22,31 +22,38 @@
   100% { background-position: 0% 50%; }
 }
 
-/* Título */
+/* TÍTULO */
 .subtitulo {
-  text-align: center;
+  text-align: right;
+  width: 100%;                  /* faz o título acompanhar a largura do bloco */
+  display: flex;
+  justify-content: flex-end;    /* empurra o texto pro lado direito */
+  
+  margin: 0 auto 10px;          /* centraliza o contêiner, mas texto fica à direita */
+  max-width: 1020px;            /* MESMA largura da área onde está a imagem + texto */
+  
   font-size: 2.6rem;
   font-weight: 800;
-      font-family: 'Montserrat';
-
- margin-top: -40px;   /* puxa pra cima */
-  margin-bottom: 30px;
-    color:var(--cor-roxo-detalhe);
+  font-family: 'Montserrat';
+  color: var(--cor-roxo-detalhe);
   text-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  letter-spacing: -0.5px;
   animation: fadeIn 0.8s ease-out;
 }
+
+
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-15px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* FOTO DO GRUPO */
-.fotoGrupo {
+/* FOTO + TEXTO LADO A LADO */
+.fotoGrupoWrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 40px;
   margin-bottom: 70px;
   animation: fadeUp 0.9s ease-out;
 }
@@ -56,9 +63,11 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* FOTO */
 .fotoGrupoImg {
-  width: 100%;
-  max-width: 450px;
+  width: 380px;
+  max-width: 420px;
+  flex-shrink: 0;
   border-radius: 25px;
   border: 3px solid rgba(255, 255, 255, 0.45);
   padding: 10px;
@@ -73,53 +82,41 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
 }
 
+/* TEXTO AO LADO */
 .fotoGrupoTexto {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  flex: 1;
+  font-size: 1.25rem;
+  line-height: 1.9;
   font-family: 'Montserrat';
   color: var(--cor-roxo-detalhe);
-  max-width: 780px;
-  margin: 25px auto 0;
-  padding: 35px 28px;   /* Aumentei o padding para caber as aspas dentro */
+  padding: 35px 28px;
   position: relative;
-  text-align: center;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(6px);
-  transition: 0.3s ease;
 }
 
-.fotoGrupoTexto:hover {
-  transform: scale(1.01);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
-}
-
-/* Aspas decorativas agora DENTRO do box */
-.fotoGrupoTexto::before {
-  content: '"';
-  font-size: 3.5rem;
-  color: var(--cor-vermelho);
-  opacity: 0.17;
-  position: absolute;
-  top: 8px;
-  left: 18px;
-  line-height: 1;
-}
-
+/* Aspas decorativas */
+.fotoGrupoTexto::before,
 .fotoGrupoTexto::after {
   content: '"';
   font-size: 3.5rem;
   color: var(--cor-vermelho);
   opacity: 0.17;
   position: absolute;
-  bottom: 8px;
-  right: 18px;
   line-height: 1;
 }
 
+.fotoGrupoTexto::before {
+  top: 8px;
+  left: 18px;
+}
 
-
+.fotoGrupoTexto::after {
+  bottom: 8px;
+  right: 18px;
+}
 
 /* CARDS */
 .cardContainer {
@@ -128,7 +125,6 @@
   justify-content: center;
   gap: 3rem;
   padding: 10px;
-  margin-top: 30px;
 }
 
 .card {
@@ -136,7 +132,7 @@
   backdrop-filter: blur(14px);
   border-radius: 26px;
   padding: 2.4rem 1.7rem;
-  width: 310px;
+  width: 300px;
   text-align: center;
   border: 1px solid var(--cor-card-borda);
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
@@ -160,7 +156,7 @@
   box-shadow: 0 16px 36px rgba(0,0,0,0.45);
 }
 
-/* FOTO DO CARD */
+/* FOTO DOS CARDS */
 .cardImg {
   width: 185px;
   height: 185px;
@@ -185,28 +181,18 @@
   font-weight: 800;
   margin-top: 0.4rem;
   letter-spacing: 0.6px;
-      font-family: 'Montserrat';
-
+  font-family: 'Montserrat';
   text-shadow: 0 3px 6px rgba(0,0,0,0.4);
-
   text-decoration: underline;
   text-decoration-color: var(--cor-vermelho);
   text-decoration-thickness: 1px;
-  text-underline-offset: 4px; /* distância do sublinhado */
+  text-underline-offset: 4px;
 }
 
-
-/* INFO (GitHub) */
-.cardInfo {
-  margin-top: 0.7rem;
-  text-align: center;
-}
-
+/* GITHUB */
 .githubLink {
   margin-top: 10px;
   display: flex;
-      font-family: 'Montserrat';
-
   justify-content: center;
   gap: 8px;
   font-size: 1.05rem;
@@ -225,42 +211,53 @@
   font-size: 1.4rem;
 }
 
+/* CONTATO */
 .contato {
   margin-top: 45px;
-      font-family: 'Montserrat';
   margin-bottom: 20px;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 600;
+  font-family: 'Montserrat';
 }
 
-
 .emailLink {
-  display: inline-block;
   margin-left: 8px;
-   color:var(--cor-vermelho);
- 
+  color: var(--cor-vermelho);
   font-weight: bold;
   text-decoration: underline;
 }
 
 .emailLink:hover {
- color: #ff4d8d; /* rosa do SaveTots */
-  text-decoration: underline;
+  color: #ff4d8d;
   opacity: 0.8;
 }
 
+/* RESPONSIVO */
+@media (max-width: 850px) {
+  .fotoGrupoWrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
 
+  .fotoGrupoImg {
+    width: 100%;
+    max-width: 340px;
+  }
 
+  .fotoGrupoTexto {
+    font-size: 1.1rem;
+    padding: 28px 22px;
+  }
+}
 
-
-/* RESPONSIVIDADE */
 @media (max-width: 480px) {
   .subtitulo {
     font-size: 2rem;
   }
 
-.card {
+  .card {
     width: 92%;
     padding: 20px;
   }
@@ -268,14 +265,5 @@
   .cardImg {
     width: 190px;
     height: 190px;
-  }
-
-
-  .fotoGrupoImg {
-    max-width: 300px;
-  }
-
-  .fotoGrupoTexto {
-    font-size: 1.05rem;
   }
 }

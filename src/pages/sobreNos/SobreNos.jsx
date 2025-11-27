@@ -19,9 +19,11 @@ export default function SobreNos() {
   return (
     <div className={styles.container}>
       <div className={styles.fundadores}>
-        <h3 className={styles.subtitulo}>Quem fundou esse projeto?</h3>
+        
+        <h3 className={styles.subtitulo}>Qual o propósito do projeto?</h3>
 
-        <div className={styles.fotoGrupo}>
+        {/* FOTO + TEXTO LADO A LADO */}
+        <div className={styles.fotoGrupoWrapper}>
           <img
             src={fotoGrupoJuntas}
             alt="Foto das fundadoras juntas"
@@ -34,6 +36,7 @@ export default function SobreNos() {
           </p>
         </div>
 
+        {/* CARDS DAS DESENVOLVEDORAS */}
         <div className={styles.cardContainer}>
           {desenvolvedoras.map((dev, index) => (
             <div key={index} className={styles.card}>
@@ -53,17 +56,16 @@ export default function SobreNos() {
           ))}
         </div>
 
-        {/* 🔥 SEÇÃO FINAL DE CONTATO — a única */}
-      <p className={styles.contato}>
-  Quer saber mais informações sobre o projeto?
-  <a 
-    href="mailto:savetotsiot@gmail.com" 
-    className={styles.emailLink}
-  >
-    savetotsiot@gmail.com
-  </a>
-</p>
-
+        {/* CONTATO FINAL */}
+        <p className={styles.contato}>
+          Quer saber mais informações sobre o projeto?
+          <a 
+            href="mailto:savetotsiot@gmail.com" 
+            className={styles.emailLink}
+          >
+            savetotsiot@gmail.com
+          </a>
+        </p>
 
       </div>
     </div>
