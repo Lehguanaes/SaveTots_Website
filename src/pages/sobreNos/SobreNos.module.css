@@ -10,9 +10,8 @@
 
 /* Fundo com animação suave */
 .container {
-  padding: 80px 20px;
-  min-height: 100vh;
-  background: var(--cor-bg);
+ padding: 60px 20px 40px;
+  min-height: auto; 
   background-size: 400% 400%;
   animation: gradientMove 12s ease infinite;
 }
@@ -218,6 +217,31 @@
 .githubIcon {
   font-size: 1.4rem;
 }
+
+.contato {
+  margin-top: 45px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+.emailLink {
+  display: inline-block;
+  margin-left: 8px;
+   color:var(--cor-vermelho);
+ 
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.emailLink:hover {
+ color: #ff4d8d; /* rosa do SaveTots */
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
 
 
 

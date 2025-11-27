@@ -1,0 +1,135 @@
+/* ========================= */
+/*       ANIMAÇÕES           */
+/* ========================= */
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomHover {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 0px rgba(255,255,255,0.15); }
+  50% { box-shadow: 0 0 14px rgba(255,255,255,0.4); }
+  100% { box-shadow: 0 0 0px rgba(255,255,255,0.15); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* ========================= */
+/*       SEU CÓDIGO          */
+/* ========================= */
+
+.cardsWrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* CARD GRANDE */
+.cardGrande {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  gap: 25px;
+  align-items: center;
+
+  /* animação na entrada */
+  animation: fadeUp .8s ease forwards;
+}
+
+.cardGrande img {
+  width: 280px;
+  border-radius: 14px;
+
+  /* zoom suave no hover */
+  transition: transform .25s ease;
+}
+
+.cardGrande:hover img {
+  animation: zoomHover .25s ease forwards;
+}
+
+.cardGrande p {
+  font-size: 1.28rem;
+  line-height: 1.6;
+  color: var(--cor-vermelho);
+  font-weight: 500;
+  border-bottom: 3px solid var(--cor-vermelho);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+/* LINHA COM DOIS CARDS */
+.cardLinhaBaixo {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* CARDS MENORES */
+.card {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+
+  /* animações */
+  animation: fadeUp .8s ease forwards;
+  animation-delay: .2s; /* entra depois do grande */
+  transition: transform .3s ease;
+
+  /* flutuar */
+  animation: float 5s ease-in-out infinite;
+}
+
+.card:hover {
+  animation: glow 1.4s ease-in-out infinite;
+}
+
+.card img {
+  width: 100%;
+  max-width: 290px;
+  border-radius: 12px;
+  margin: 0 auto;
+  transition: transform .25s ease;
+}
+
+.card:hover img {
+  animation: zoomHover .25s ease forwards;
+}
+
+.card p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: var(--cor-roxo-detalhe);
+  line-height: 1.5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .cardGrande {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cardLinhaBaixo {
+    flex-direction: column;
+  }
+}

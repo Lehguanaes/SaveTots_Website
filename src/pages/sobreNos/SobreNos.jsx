@@ -40,7 +40,6 @@ export default function SobreNos() {
               <img src={dev.img} alt={dev.nome} className={styles.cardImg} />
               <h4 className={styles.cardTitle}>{dev.nome}</h4>
 
-              {/* GitHub com link + ícone */}
               <a
                 href={`https://github.com/${dev.github}`}
                 target="_blank"
@@ -53,6 +52,19 @@ export default function SobreNos() {
             </div>
           ))}
         </div>
+
+        {/* 🔥 SEÇÃO FINAL DE CONTATO — a única */}
+      <p className={styles.contato}>
+  Quer saber mais informações sobre o projeto?
+  <a 
+    href="mailto:savetotsiot@gmail.com" 
+    className={styles.emailLink}
+  >
+    savetotsiot@gmail.com
+  </a>
+</p>
+
+
       </div>
     </div>
   );

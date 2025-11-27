@@ -1,5 +1,7 @@
 .footer-container {
   background: var(--color-bg-footer);
+    background: var(--cor-bg);
+
   color: var(--color-text-footer);
   text-align: center;
   padding: 20px 12px;
