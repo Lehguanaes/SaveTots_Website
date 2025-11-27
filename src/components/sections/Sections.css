@@ -27,10 +27,11 @@
   width: 100%;
   text-align: center;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 700px;
   margin-bottom: 20px;
   color: var(--cor-branco);
-
+  text-transform: uppercase; /* tudo MAIÚSCULO */
+  font-family: 'Montserrat', sans-serif; /* fonte quadrada */
   /* garante que NÃO vire card */
   flex: 0 0 100%;
 }
@@ -68,4 +69,87 @@
 .cardContent p {
   font-size: 1.05rem;
   line-height: 1.6;
+}
+
+/* ============================= */
+/*  RESPONSIVO — SEÇÃO 2 CARDS   */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .cardsSection {
+      padding: 50px 20px 30px;
+      gap: 25px;
+  }
+
+  .mainTitle {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+  }
+
+  .card {
+      width: 100%;
+      max-width: 300px; /* menor ainda */
+      border-radius: 16px;
+  }
+
+  .stepTitle {
+      font-size: 1.25rem;
+      margin: 12px 0 6px;
+  }
+
+  .description {
+      font-size: 1rem;
+  }
+
+  .cardImg {
+      width: 180px;       /* reduzida */
+      padding: 6px;
+      border-radius: 16px;
+  }
+
+  .cardContent {
+      padding: 0 12px 18px;
+  }
+
+  .cardContent p {
+      font-size: 0.92rem;
+      line-height: 1.4;
+  }
+}
+
+/* Celulares muito pequenos (até 420px) */
+@media (max-width: 420px) {
+
+  .cardsSection {
+      padding: 40px 15px 25px;
+      gap: 18px;
+  }
+
+  .mainTitle {
+      font-size: 1.35rem;
+  }
+
+  .card {
+      max-width: 260px; /* ainda menor */
+  }
+
+  .stepTitle {
+      font-size: 1.1rem;
+  }
+
+  .description {
+      font-size: 0.9rem;
+  }
+
+  .cardImg {
+      width: 150px;      /* bem menor */
+      padding: 5px;
+      border-radius: 14px;
+  }
+
+  .cardContent p {
+      font-size: 0.82rem;
+      line-height: 1.32;
+  }
 }

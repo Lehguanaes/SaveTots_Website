@@ -9,7 +9,7 @@
 .imagem {
   width: 100%;
   height: auto;
-  max-height: 600px;
+  max-height: 550px;
   transition: opacity 2s ease-in-out;
   object-fit: cover;
 }
@@ -38,20 +38,52 @@
   width: 10px !important;
 }
 
-#triangulo {
-  background: url(../../assets/carrossel/triangulo-rosa-carrosel.png) no-repeat;
-  background-size: 100% 65px;
-  height: 214px;
-  position: absolute;
-  width: 100%;
-  bottom: -150px;
-  left: 0;
-  right: 0;
+/* ======================= */
+/*   RESPONSIVIDADE        */
+/* ======================= */
+
+/* Tablets e celulares médios */
+@media (max-width: 768px) {
+
+  /* Carrossel ajusta automaticamente */
+  .carrossel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Imagem ajusta sem gerar espaços brancos */
+  .imagem {
+    width: 100%;
+    height: auto;
+    display: block;      /* remove qualquer espaço embaixo */
+    object-fit: cover;   /* mantém o corte elegante */
+  }
+
+  /* Setas maiores para mobile */
+  .setaEsquerda img,
+  .setaDireita img {
+    width: 22px;
+  }
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .carrossel {
-    height: 400px;
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+  /* Ajusta mais ainda a altura da imagem se estiver muito grande */
+  .imagem {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
+
+  /* Setas ficam um pouco menores */
+  .setaEsquerda img,
+  .setaDireita img {
+    width: 18px;
+  }
+
+  
+
 }

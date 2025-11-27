@@ -45,7 +45,6 @@ export default function Carrossel() {
         <img src={setaDireita} alt="Próxima" />
       </div>
 
-      <div id="triangulo"></div>
     </div>
   );
 }

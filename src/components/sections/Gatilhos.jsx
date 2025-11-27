@@ -8,25 +8,25 @@ export default function Gatilhos() {
         <div className="cardsSection">
 
             <h1 className="mainTitle">
-                Nosso conjunto de produtos funcionam com base em três gatilhos:
+                Nosso conjunto de produtos funcionam <br/> com base em três gatilhos:
             </h1>
 
             <div className="card">
                 <h3 className="stepTitle">1° GATILHO</h3>
                 <img src={peso} className="cardImg" />
-                <p className="description">Monitorar se há peso..</p>
+                <p className="description">Monitorar se há peso</p>
             </div>
 
             <div className="card">
                 <h3 className="stepTitle">2° GATILHO</h3>
                 <img src={movimento} className="cardImg" />
-                <p className="description">Verificar se há movimento.</p>
+                <p className="description">Verificar se há movimento</p>
             </div>
 
             <div className="card">
                 <h3 className="stepTitle">3° GATILHO</h3>
                 <img src={ausencia} className="cardImg" />
-                <p className="description">Identificar se há ausencia do responsável.</p>
+                <p className="description">Identificar se há ausencia do responsável</p>
             </div>
 
         </div>
