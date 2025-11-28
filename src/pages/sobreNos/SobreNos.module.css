@@ -260,12 +260,7 @@
     max-width: 320px;
   }
 
-  .fotoGrupoTexto {
-    font-size: 1.05rem;
-    padding: 25px 20px;
-    margin-top: -10px; /* sobe um pouquinho no mobile */
-    width: 95%;
-  }
+  
 
   .subtitulo {
     justify-content: center;  /* título centralizado no mobile */
@@ -276,11 +271,7 @@
 }
 
 @media (max-width: 600px) {
-  .fotoGrupoTexto {
-    font-size: 1rem;
-    padding: 22px 18px;
-    margin-top: -5px;
-  }
+  
 
   .fotoGrupoImg {
     max-width: 280px;
@@ -302,12 +293,7 @@
     margin-bottom: 5px;
   }
 
-  .fotoGrupoTexto {
-    font-size: 0.95rem;
-    padding: 20px 15px;
-    margin-top: 0; /* perfeito em celulares pequenos */
-    width: 100%;
-  }
+  
 
   .fotoGrupoImg {
     max-width: 250px;
@@ -324,5 +310,102 @@
 
   .contato {
     font-size: 1rem;
+  }
+}
+
+/* ============================= */
+/* RESPONSIVIDADE AJUSTADA DA CAIXINHA */
+/* ============================= */
+
+/* Evita o bug entre 851 e 899px onde a caixa subia demais */
+@media (max-width: 899px) and (min-width: 851px) {
+  .fotoGrupoTexto {
+    margin-top: 0 !important;
+  }
+}
+
+/* 1050px — ajustes leves em telas médias */
+
+
+/* 850px — vira layout em coluna + box um pouco mais alta */
+@media (max-width: 850px) {
+  .fotoGrupoTexto {
+    font-size: 1.05rem;
+    padding: 25px 20px;
+    margin-top: -10px;
+    width: 95%;
+  }
+}
+
+/* 600px — caixa reduz e alinha melhor */
+@media (max-width: 600px) {
+  .fotoGrupoTexto {
+    font-size: 1rem;
+    padding: 22px 18px;
+    margin-top: 0;
+  }
+}
+
+/* 480px — celulares pequenos */
+@media (max-width: 480px) {
+  .fotoGrupoTexto {
+    font-size: 0.95rem;
+    padding: 20px 15px;
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+
+/* ============================= */
+/* AJUSTE FINO DAS ASPAS (<=735px) */
+/* ============================= */
+
+/* Resolve o problema visual a partir de 735px até o celular */
+@media (max-width: 735px) {
+
+  /* deixa as aspas menores e mais internas à caixa */
+  .fotoGrupoTexto::before,
+  .fotoGrupoTexto::after {
+    font-size: 1.9rem;     /* reduz o tamanho */
+    opacity: 0.12;         /* fica mais sutil */
+  }
+
+  /* posição superior (mais para dentro) */
+  .fotoGrupoTexto::before {
+    top: 8px;
+    left: 10px;
+    transform: none;       /* garante posição estável */
+  }
+
+  /* posição inferior (mais para dentro) */
+  .fotoGrupoTexto::after {
+    bottom: 8px;
+    right: 10px;
+    transform: none;
+  }
+
+  /* Protege quando a caixa fica mais alta/mais estreita */
+  .fotoGrupoTexto {
+    overflow: visible;     /* evita cortes nas aspas */
+  }
+}
+
+/* ajustes extras para telas muito pequenas */
+@media (max-width: 480px) {
+  .fotoGrupoTexto::before,
+  .fotoGrupoTexto::after {
+    font-size: 1.8rem;
+    opacity: 0.10;
+  }
+
+  .fotoGrupoTexto::before {
+    top: 6px;
+    left: 8px;
+  }
+
+  .fotoGrupoTexto::after {
+    bottom: 6px;
+    right: 8px;
   }
 }

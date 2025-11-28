@@ -42,28 +42,28 @@
 /*   RESPONSIVIDADE        */
 /* ======================= */
 
+/* ======================= */
+/*   RESPONSIVIDADE        */
+/* ======================= */
+
 /* Tablets e celulares médios */
 @media (max-width: 768px) {
 
-  /* Carrossel ajusta automaticamente */
   .carrossel {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+    max-height: none; /* deixa livre */
   }
 
-  /* Imagem ajusta sem gerar espaços brancos */
   .imagem {
     width: 100%;
     height: auto;
-    display: block;      /* remove qualquer espaço embaixo */
-    object-fit: cover;   /* mantém o corte elegante */
+
+    max-height: 420px;   /* limite suave */
+    object-fit: contain; /* NÃO corta a imagem */
   }
 
-  /* Setas maiores para mobile */
   .setaEsquerda img,
   .setaDireita img {
-    width: 22px;
+    width: 30px;
   }
 }
 
@@ -71,19 +71,27 @@
 /* Celulares pequenos */
 @media (max-width: 480px) {
 
-  /* Ajusta mais ainda a altura da imagem se estiver muito grande */
+  .carrossel {
+    max-height: none;
+  }
+
   .imagem {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    max-height: 400px;   /* mantém confortável */
+    object-fit: contain; /* garante que não corte */
   }
 
-  /* Setas ficam um pouco menores */
   .setaEsquerda img,
   .setaDireita img {
-    width: 18px;
+    width: 15px !important; /* seta maior mas não gigante */
   }
 
-  
+  .setaEsquerda {
+    left: 10px;
+  }
 
+  .setaDireita {
+    right: 10px;
+  }
 }
