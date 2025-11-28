@@ -104,26 +104,91 @@
 /* ============================= */
 /* RESPONSIVO                    */
 /* ============================= */
+/* ============================= */
+/* RESPONSIVO                    */
+/* ============================= */
 
 @media (max-width: 900px) {
     .gatilhosSection {
         flex-direction: column;
-        padding: 60px 30px;
-        text-align: center;
+        padding: 50px 20px;
+        gap: 40px;
     }
 
     .gatilhosText {
         width: 100%;
+        text-align: center;
     }
 
     .gatilhosCards {
         width: 100%;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
     }
 
     .gatilhoItem {
-        width: 230px;
-        min-height: 300px;
+        width: 220px;
+        min-height: 280px;
+        padding: 25px;
+    }
+
+    .gatilhoItem img {
+        width: 100px;
+        height: 100px;
+        padding: 12px;
+    }
+}
+
+/* Telas pequenas (celular) */
+@media (max-width: 600px) {
+    .gatilhosTitle {
+        font-size: 1.8rem;
+    }
+
+    .gatilhosLine {
+        width: 200px;
+    }
+
+    .gatilhosDescription {
+        font-size: 1rem;
+    }
+
+    .gatilhoItem {
+        width: 180px;
+        min-height: 250px;
+        padding: 20px;
+    }
+
+    .gatilhoItem img {
+        width: 85px;
+        height: 85px;
+        padding: 10px;
+    }
+}
+
+/* Telas muito pequenas (tipo celulares compactos) */
+@media (max-width: 420px) {
+    .gatilhosCards {
+        gap: 18px;
+    }
+
+    .gatilhoItem {
+        width: 160px;
+        min-height: 230px;
+        padding: 18px;
+    }
+
+    .gatilhoItem h3 {
+        font-size: 1.1rem;
+    }
+
+    .gatilhoItem img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .gatilhoItem p {
+        font-size: 0.9rem;
     }
 }

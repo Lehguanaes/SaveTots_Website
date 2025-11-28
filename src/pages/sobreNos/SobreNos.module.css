@@ -30,13 +30,12 @@
   justify-content: flex-end;    /* empurra o texto pro lado direito */
   
   margin: 0 auto 10px;          /* centraliza o contêiner, mas texto fica à direita */
-  max-width: 1020px;            /* MESMA largura da área onde está a imagem + texto */
+  max-width: 870px;            /* MESMA largura da área onde está a imagem + texto */
   
   font-size: 2.6rem;
   font-weight: 800;
   font-family: 'Montserrat';
   color: var(--cor-roxo-detalhe);
-  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
   animation: fadeIn 0.8s ease-out;
 }
 
@@ -70,7 +69,6 @@
   flex-shrink: 0;
   border-radius: 25px;
   border: 3px solid rgba(255, 255, 255, 0.45);
-  padding: 10px;
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(8px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.4);
@@ -84,6 +82,7 @@
 
 /* TEXTO AO LADO */
 .fotoGrupoTexto {
+    margin-top: -30px; 
   flex: 1;
   font-size: 1.25rem;
   line-height: 1.9;
@@ -197,6 +196,8 @@
   gap: 8px;
   font-size: 1.05rem;
   font-weight: 600;
+    font-family: 'Montserrat';
+
   color: var(--cor-roxo-detalhe);
   text-decoration: none;
   transition: 0.25s ease;
@@ -232,38 +233,96 @@
   color: #ff4d8d;
   opacity: 0.8;
 }
+/* ============================= */
+/* RESPONSIVO APRIMORADO        */
+/* ============================= */
 
-/* RESPONSIVO */
+@media (max-width: 1050px) {
+  .fotoGrupoWrapper {
+    gap: 30px;
+  }
+
+  .fotoGrupoTexto {
+    margin-top: -20px;
+  }
+}
+
 @media (max-width: 850px) {
   .fotoGrupoWrapper {
     flex-direction: column;
     text-align: center;
-    gap: 25px;
+    gap: 22px;
+    margin-bottom: 40px;
   }
 
   .fotoGrupoImg {
-    width: 100%;
-    max-width: 340px;
+    width: 90%;
+    max-width: 320px;
   }
 
   .fotoGrupoTexto {
-    font-size: 1.1rem;
-    padding: 28px 22px;
+    font-size: 1.05rem;
+    padding: 25px 20px;
+    margin-top: -10px; /* sobe um pouquinho no mobile */
+    width: 95%;
+  }
+
+  .subtitulo {
+    justify-content: center;  /* título centralizado no mobile */
+    text-align: center;
+    max-width: 100%;
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .fotoGrupoTexto {
+    font-size: 1rem;
+    padding: 22px 18px;
+    margin-top: -5px;
+  }
+
+  .fotoGrupoImg {
+    max-width: 280px;
+  }
+
+  .cardContainer {
+    gap: 2rem;
+  }
+
+  .card {
+    width: 90%;
+    padding: 1.8rem 1.4rem;
   }
 }
 
 @media (max-width: 480px) {
   .subtitulo {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
   }
 
-  .card {
-    width: 92%;
-    padding: 20px;
+  .fotoGrupoTexto {
+    font-size: 0.95rem;
+    padding: 20px 15px;
+    margin-top: 0; /* perfeito em celulares pequenos */
+    width: 100%;
+  }
+
+  .fotoGrupoImg {
+    max-width: 250px;
   }
 
   .cardImg {
-    width: 190px;
-    height: 190px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  .contato {
+    font-size: 1rem;
   }
 }
