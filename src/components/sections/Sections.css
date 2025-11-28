@@ -3,6 +3,8 @@
 /* ============================= */
 
 .gatilhosSection {
+      animation: fadeIn 1s ease-out;
+
     background-color: #6D4A9C;
     padding: 50px 50px;
     display: flex;

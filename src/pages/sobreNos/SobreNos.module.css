@@ -36,7 +36,7 @@
   font-weight: 800;
   font-family: 'Montserrat';
   color: var(--cor-roxo-detalhe);
-  animation: fadeIn 0.8s ease-out;
+  animation: fadeIn 1s ease-out;
 }
 
 
@@ -181,7 +181,6 @@
   margin-top: 0.4rem;
   letter-spacing: 0.6px;
   font-family: 'Montserrat';
-  text-shadow: 0 3px 6px rgba(0,0,0,0.4);
   text-decoration: underline;
   text-decoration-color: var(--cor-vermelho);
   text-decoration-thickness: 1px;
@@ -325,7 +324,11 @@
 }
 
 /* 1050px — ajustes leves em telas médias */
-
+@media (max-width: 1050px) {
+  .fotoGrupoTexto {
+    margin-top: -20px;
+  }
+}
 
 /* 850px — vira layout em coluna + box um pouco mais alta */
 @media (max-width: 850px) {

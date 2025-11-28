@@ -6,7 +6,7 @@ import jovanaImg from '../../assets/sobrenos/dev_jovana.jpg';
 import karinneImg from '../../assets/sobrenos/dev_karinne.jpg';
 import leticiaImg from '../../assets/sobrenos/dev_leticia.jpg';
 import mariaImg from '../../assets/sobrenos/dev_maria.jpg';
-import fotoGrupoJuntas from '../../assets/sobrenos/desenvolvedoras.jpg';
+import fotoGrupoJuntas from '../../assets/sobrenos/desenvolvedoras.jpeg';
 
 export default function SobreNos() {
   const desenvolvedoras = [
@@ -20,7 +20,7 @@ export default function SobreNos() {
     <div className={styles.container}>
       <div className={styles.fundadores}>
         
-        <h3 className={styles.subtitulo}>Qual o propósito do projeto?</h3>
+        <h3 className={styles.subtitulo}>Qual é o propósito do projeto?</h3>
 
         {/* FOTO + TEXTO LADO A LADO */}
         <div className={styles.fotoGrupoWrapper}>

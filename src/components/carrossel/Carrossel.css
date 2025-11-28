@@ -1,4 +1,6 @@
 .carrossel {
+    animation: fadeIn 1s ease-out;
+
   background-color: var(--cor-branco);
   width: 100%;
   overflow: hidden;
